@@ -1,9 +1,10 @@
 package com.vediconex.www;
 
-public class Student extends Person {
+public class Student extends Person implements Taxation {
 	
 	private String course;
 	private String university;
+	private double taxCode;
 
        //making some random changes
 	
@@ -34,6 +35,12 @@ public class Student extends Person {
 		return "Student [course=" + course + ", university=" + university
 				+ "Course=" + getCourse() + "University()= "
 				+ getUniversity() + "]";
+	}
+
+	@Override
+	public void displayTaxRate() {
+		taxCode = 20.00;
+		System.out.println(taxCode);
 	}
 	
 	
